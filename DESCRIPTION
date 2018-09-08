@@ -5,7 +5,6 @@ Version: 0.1.0
 Author: Hao Li
 Maintainer: Hao Li <lhrcplanes@qq.com>
 Description: Objective Aviation Exploratory Design Package for r
-    
 License: GPL V 3.0
 Encoding: UTF-8
 LazyData: true
