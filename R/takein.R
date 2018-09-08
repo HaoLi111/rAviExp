@@ -1,6 +1,6 @@
 takein<-function(x,...) UseMethod('takein')
-'%takein%'<-function(a,b) takein(a,b)
-'%>takein>%'<-function(a,b) takein(b,a)
+'%takein%'<-function(a,b) return(takein(a,b))
+'%>takein>%'<-function(a,b) return(takein(b,a))
 
 takein.Constraint<-function(Cons,part){
   if(class(part)=='AlphaOut'){
@@ -8,14 +8,15 @@ takein.Constraint<-function(Cons,part){
     #Clo=as.vector(o$kmax)['Cl']
     #Cdo=as.vector(o$kmax)['Cd']
     if(class(part$Raw)=='Alpha_lin'){
-      Cd_min<-part$Raw$Cd0
-      k<-part$Raw$CdiF
+      assign('Cd_min',part$Raw$Cd0)
+      assign('k',part$Raw$CdiF)
+      Cd_min<-as(Cd_min,'numeric')
+      k<-as(k,'numeric')
       Cons$TURN$k<-k
       Cons$ENERGY_LEVEL$k<-k
       Cons$CLIMB$k<-k
       Cons$CRUISE_V$k<-k
       Cons$SERVICE_CEILING$k<-k
-
     }else{
       Cd_min=as.vector(o$Cdmin)['Cd']
       k=NA
@@ -27,8 +28,8 @@ takein.Constraint<-function(Cons,part){
     Cons$CLIMB$Cd_min<-Cd_min
     Cons$CRUISE_V$Cd_min<-Cd_min
     Cons$SERVICE_CEILING$Cd_min<-Cd_min
-    Cons$TO_DISTANCE$ClTO<-as.vector(o$Clmax)['Cl']
-    Cons$TO_DISTANCE$CdTO<-as.vector(o$Clmax)['Cd']
+    Cons$TO_DISTANCE$ClTO<-as(o$Clmax['Cl'],'numeric')
+    Cons$TO_DISTANCE$CdTO<-as(o$Clmax['Cd'],'numeric')
   }
   #if(class(part)=='')
   Cons

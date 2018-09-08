@@ -116,7 +116,6 @@ lines.ThetaOut<-function(o){
 analyse<-function(x,...) UseMethod('analyse')
 analyse.state<-function(state){
 	k = state$Cl/state$Cd
-
 }
 
 
