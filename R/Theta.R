@@ -1,8 +1,6 @@
 
 #climbAngle = -10:10#Climbangle negative for gliding
-
 FD = function(Cd,rho,S,v) .5*Cd*rho*S*v^2
-
 #Cd = k* Cl
 
 

@@ -1,11 +1,11 @@
 Package: rAviExp
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Aviation Exploratory
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Hao Li
+Maintainer: Hao Li <lhrcplanes@qq.com>
+Description: Objective Aviation Exploratory Design Package for r
+    
+License: GPL V 3.0
 Encoding: UTF-8
 LazyData: true

@@ -337,7 +337,7 @@ plot.ConstraintOut<-function(ca,y=1.4){
   #ca=ca$Out
   matplot(ca$Out[,1],ca$Out
           [,-1],xlab ='W / S',ylab = 'T / W',type = 'l',main =paste( 'Constraint Analysis of',deparse(substitute(ca)),sep=' '))
-  legend(max(ca$Constraint$W_S)/2,y=y,legend=(colnames(ca$Out)[-1]),col = 2:length(ncol(ca$Out)),cex = 1,fill = 1:ncol(ca$Out))
+  legend(max(ca$Constraint$W_S)/2,y=y,legend=(colnames(ca$Out)[-1]),col = 2:length(ncol(ca$Out)),lty = 1:ncol(ca$Out))
 
   points(o[2],o[1],col = 'red',pty = 3)
 }
