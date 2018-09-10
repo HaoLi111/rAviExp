@@ -13,4 +13,4 @@ https://aviexptemp.weebly.com/
 
 I intend to make the project open-source and it follows the GPL_V3.0
 
-I hope this could make the designer's life easier.
+I hope this could make the designers' life easier.
