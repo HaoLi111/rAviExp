@@ -1,2 +1,4 @@
 exportPattern("^[[:alpha:]]+")
 S3method(takein, Constraint)
+export('%takein%')
+export('%<takein<%')
