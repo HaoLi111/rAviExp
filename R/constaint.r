@@ -335,9 +335,9 @@ print.ConstraintOut<-function(DATA){
 plot.ConstraintOut<-function(ca,y=1.4){
   o = Optim(ca)
   #ca=ca$Out
-  matplot(ca$Out[,1],ca$Out
-          [,-1],xlab ='W / S',ylab = 'T / W',type = 'l',main =paste( 'Constraint Analysis of',deparse(substitute(ca)),sep=' '))
-  legend(max(ca$Constraint$W_S)/2,y=max(ca$Out[,-1]),bty='n',legend=(colnames(ca$Out)[-1]),col = 2:ncol(ca$Out),lty = 2:ncol(ca$Out))
+  matplot(ca$Out[,1],ca$Out[,-1],ylim=c(0,2),
+          ,xlab ='W / S',ylab = 'T / W',type = 'l',main =paste( 'Constraint Analysis of',deparse(substitute(ca)),sep=' '))
+  legend(max(ca$Raw$W_S)/2,y=2,bty='n',legend=(colnames(ca$Out)[-1]),col = 1:(ncol(ca$Out)-1),lty = 1:(ncol(ca$Out)-1))
 
   points(o[2],o[1],col = 'red',pty = 3)
 }
