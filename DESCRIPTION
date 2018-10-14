@@ -5,6 +5,9 @@ Version: 0.1.0
 Author: Hao Li
 Maintainer: Hao Li <lhrcplanes@qq.com>
 Description: Objective Aviation Exploratory Design Package for r
-License: GPL V 3.0
+License: LGPL V 3.0
 Encoding: UTF-8
 LazyData: true
+Imports: MFVN
+Suggests: scatterplot3d
+Additional_repositories: https://github.com/HaoLi111/MFVN
