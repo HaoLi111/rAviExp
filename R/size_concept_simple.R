@@ -19,6 +19,7 @@ WM=size_wing_simple(S,AR,TR,Type=0,Xf_C = Xf_C)
 m<-MAC(WM)
 ShLh=m$CordAvg*S*Vh
 SvLv=WM$Span*S*Vv
+
 Sh=ShLh/l
 Sv=SvLv/l
 WH=size_wing_simple(Sh,ARh,TRh,Type=0,Xf_C=Xf_C)
@@ -35,8 +36,9 @@ WH$y<-WH$z<-WV$y<-WV$z<-0
 
 concept<-list(WM=WM,WV=WV, WH=WH)
 class(concept)='conventionalConcept'
+return(concept)
 #concept$fuselage<-fuselage.default
 #plotxy(concept)
-return(list(concept=concept,
-            Xnp=Xnp))
+#return(list(concept=concept,
+           # Xnp=Xnp))
 }

@@ -1,4 +1,14 @@
-
+takein.Weight_coarse<-function(a,b){
+  if(class(b)=='ConstraintOut'){
+    o=Optim(b)
+    v=b$Raw$CRUISE_V$v
+    a$W_S<-as.numeric(o[2])
+    a$T_W<-as.numeric(o[1])
+    a$v<-v
+    
+  }
+  a
+}
 
 create.Weight_coarse<-function(wt){
   
