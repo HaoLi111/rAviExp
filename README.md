@@ -11,6 +11,6 @@ This version is the 1st released version of AviExp project.
 For manuals, tutorials, worksheets, reference books and relavant projects please visit:
 https://aviexptemp.weebly.com/
 
-I intend to make the project open-source and it follows the GPL_V3.0
+I intend to make the project open-source and it follows the LGPL_V3.0
 
 I hope this could make the designers' life easier.
