@@ -1,15 +1,5 @@
 #Constraint Configuration
 # Global Cl
-Config<-function(x,...) UseMethod('Config')
-Config.Constraint<-function(cons = Constraint.template,Alpha){
-  Cdmin = fetchAlpha_Cdmin(Alpha)[3]
-
-}
-
-
-
-
-#
 k<-function(AR = 8, e= 1) (3.141593 * AR * e)^(-1)
 Q<-function(v,H = 0) .5*Rho(H)*v^2#Potential Energy Density
 Rho<-function(H = 0) 101.325e3*(1-H*.0065/288.15)^(9.80665*0.0289644/8.31447/.0065)*0.0289644/8.31447/(288.15-H*0.0065)

@@ -17,7 +17,7 @@ Xnp_C=Xf_C + (1+2/AR)/(1+2/ARh)*(1-4/(AR+2))*Vh
 Xcg_C=Xnp_C
 WM=size_wing_simple(S,AR,TR,Type=0,Xf_C = Xf_C)
 m<-MAC(WM)
-ShLh=m$CordAvg*S*Vh
+ShLh=m$ChordAvg*S*Vh
 SvLv=WM$Span*S*Vv
 
 Sh=ShLh/l
@@ -28,7 +28,7 @@ mh<-MAC(WH)
 mv<-MAC(WV)
 #position Wings and Stabs
 WM$x=xWM;WM$y<-WM$z<-0
-Xnp=xWM+m$xMAC+Xnp_C*m$CordAvg
+Xnp=xWM+m$xMAC+Xnp_C*m$ChordAvg
 xT<-Xnp+l
 WH$x<-xT-mh$AF
 WV$x<-xT-mv$AF
