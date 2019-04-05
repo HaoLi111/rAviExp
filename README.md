@@ -154,6 +154,6 @@ the physics theories but also the connections between them.
 
 # Demo
 
-A demo ca be found there
+A demo can be found there
 
 https://github.com/HaoLi111/rAviExp/blob/master/demo/demo1missionspcfc.R
