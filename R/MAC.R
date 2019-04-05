@@ -1,5 +1,4 @@
-#Naming refers to
-
+#Naming refers to\
 
 #  Root Chord (A):
 #MAC Graphic

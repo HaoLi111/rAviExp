@@ -386,9 +386,6 @@ Sensi.Constraint<-function(Cons,Deffunc,param){
 }
 
 
-
-
-
 #ca<-create(Constraint.default)
 #head(ca$Out)
 #plot(ca)

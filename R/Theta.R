@@ -77,6 +77,8 @@ lines.ThetaOut<-function(o){
          col=1:2,lty=1:2,bty='n')
   try(abline(v = m[which.max(m[,'vy']),1],col='green',lty=3))
   try(abline(h = max(m[,'vy']),col='green',lty=3))
+
+  grid()
   #2
 
   matplot(m[,'angle'],m[,c('Thrust','Power')],type='l',
@@ -92,6 +94,7 @@ lines.ThetaOut<-function(o){
   try(abline(h=o$Raw$Pp$P_max,col='brown',lty=5))
   try(abline(h=o$Raw$Pp$F_max,col='brown',lty=5))
 
+  grid()
   #3
   plot(m[,'vx'],m[,'vy'],type='l',
        xlab ='Vx',ylab = 'Vy',
@@ -101,13 +104,17 @@ lines.ThetaOut<-function(o){
   try(abline(v=m[which.max(m[,'Power']),'vx'],col='red',lty=3))
   try(abline(h= m[which.max(m[,'Thrust']),'vy'],col='purple',lty=3))
   try(abline(h=m[which.max(m[,'Power']),'vy'],col='red',lty=3))
+
+  grid()
   #4
   plot(m[,'Thrust'],m[,'Power'],type='l',main='Power ~ Thrust',xlab = 'F_T (Thrust)',ylab='P (Power)')
   try(abline(v = o$Raw$Pp$F_max,col='brown',lty=5))
   try(abline(h = o$Raw$Pp$P_max,col='brown',lty=5))
-  layout(matrix(1,1))
+  grid()
   legend(x=max(m[,'Thrust'])/5,y = max(m[,'Power'])*4/5,legend =c('P ~ F','limit'),
          col=c('black','brown'),lty=1:2,bty='n')
+  layout(matrix(1,1))
+
 }
 
 

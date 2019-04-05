@@ -8,12 +8,12 @@
 #2.when extending (may overwite to the existing customized data)or extracting(may lose details if not for the simplified model), the calculation model is applicable for the specific plane.
 Wing.template<-list(m = NA,
                     x = NA, y = NA, z = NA,
-                    CordR=NA,CordT=NA,Span=NA,Sweep=NA,
+                    ChordR=NA,ChordT=NA,Span=NA,Sweep=NA,
                     Foil=NA,
                     Dihedral=NA)
 
 wing.default<-list(m=.2,x=.3,y=0,z=0,
-                   CordR=.5,CordT=.3,Span=.8,Sweep=20,
+                   ChordR=.5,ChordT=.3,Span=.8,Sweep=20,
                    Foil='NACA2412',
                    Dihedral=5,
                    Type=0)
@@ -26,10 +26,10 @@ class(wing.default)<-'wing'
 #   |
 #  \|/
 # WingExt
-WingExt.template=list(CordR=NA,
-                      CordT=NA,
-                      CordAvgGeometric=NA,#
-                      CordAvgAerodynamic=NA,#
+WingExt.template=list(ChordR=NA,
+                      ChordT=NA,
+                      ChordAvgGeometric=NA,#
+                      ChordAvgAerodynamic=NA,#
                       Span=NA,
                       SpanHalf=NA,#
                       SweepFront=NA,

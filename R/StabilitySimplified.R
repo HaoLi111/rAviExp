@@ -18,7 +18,7 @@ SC_simp.conventionalConcept=function(x,Xcg,Xnp = NULL,gamma.include =F,Cl = NA,G
   Vv = Geom_Area(x$WV)*Lever$LV / Geom_Area(x$WV) / MACM$ChordAvg
   if (is.null(Xnp)){
     Xnp_OCW_est<-MACM$ChordAvg*(.25+(1+2/Geom_AR(x$WM))/(1+2/Geom_AR(x$WH)))*(1-4/(2+Geom_AR(x$WM))*Vh)+x$WM$x
-    message(paste0('No Xnp Detected, using estimation from OCW Lab8 Notes P4',Xnp_OCW_est))
+    #message(paste0('No Xnp Detected, using estimation from OCW Lab8 Notes P4',Xnp_OCW_est))
     Xnp = Xnp_OCW_est
   }
   SM =(Xcg - Xnp)/ MACM$ChordAvg#;message('OK')#Static Margin
@@ -28,9 +28,9 @@ SC_simp.conventionalConcept=function(x,Xcg,Xnp = NULL,gamma.include =F,Cl = NA,G
 
   if(gamma.include==T){
     B = Lever$LV / x$WM$Span * Gamma / Cl#Gamma in Deg Blaine Rowdon Factor of spiral stability
-    try(VvB = Vv*B)
-    try(Coef = cbind(Coef,B))
-    try(Coef = cbind(Coef,VvB))
+    VvB = Vv*B
+    Coef = cbind(Coef,B)
+    Coef = cbind(Coef,VvB)
   }
 
   Raw = list(Xcg=Xcg,Xnp=Xnp)

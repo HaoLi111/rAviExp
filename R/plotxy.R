@@ -8,10 +8,14 @@ plotxy.wing<-function(wing,add=F,col='black',lty=1){
   span<-wing$Span/2
   x=wing$x;y=wing$y;z=wing$z
   front<-c(x,y,z)
+  #dim(front) = c(1,3)
   rear<-c(x+wing$ChordR,y,z*wing$Dihedral)
+  #dim(rear) = c(1,3)
   frontT<-c(x+span*sind(wing$Sweep),y+span*cosd(wing$Sweep),z+span*cosd(wing$Dihedral))
+  #dim(frontT) = c(1,3)
   rearT<-c(x+span*sind(wing$Sweep)+wing$ChordT,y+span*cosd(wing$Sweep),z+span*cosd(wing$Dihedral))
-  pointCloud<-rbind(front,frontT,rearT,rear)
+  #dim(rearT) = c(1,3)
+  pointCloud<-rbind(as.numeric(front)[1:2],as.numeric(frontT)[1:2],as.numeric(rearT)[1:2],as.numeric(rear)[1:2])
   plot(pointCloud[,1],pointCloud[,2],xlab='x',ylab='y',type='l',asp=1,col=col,lty=lty)
   }
 }
@@ -41,9 +45,10 @@ pointsxy.fuse<-function(fuse,col='black',lty=1){
 }
 
 #plotxy(fuselage.default,add=T)
-plotxy.conventionalConcept<-function(concept){
+plotxy.conventionalConcept = function(concept){
   #range of plotting
-  plot(c(0,max(concept$fuselage$x)),c(0,max(concept$WM$Span/2,concept$WH$Span/2)),type='n')
+  plot(c(0,max(concept$fuselage$x)),c(0,max(concept$WM$Span/2)),type='n',asp=1,
+       xlab = 'x',ylab = 'y')
   pointsxy(concept$fuselage)
   pointsxy(concept$WM)
   pointsxy(concept$WH)
