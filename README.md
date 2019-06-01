@@ -1,5 +1,17 @@
 # rAviExp
 
+## Warning - NOT MAINTAINED
+
+This package was first developed as my high school science fair project and mathematical models are from various sources and some are not well-documented in the help files. There is no guarantee of correctness for some of the undocumented algorithms. No real model has been tested with this packages. All demos are conceptual.
+
+The dependency 'MFVN' is deprecated(although it may still work).
+
+I have switched to more theoretical coding for mathematics and will not get round to this package.
+
+If you wish to be the maintainer of the package, or intend to branch your distribution of it please contact me for more background info about this project.
+
+Treat the application with great care.
+
 ## Brief
 
 R library for Aviation Exploratory design.
