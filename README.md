@@ -6,7 +6,7 @@ This package was first developed as my high school science fair project and math
 
 The dependency 'MFVN' is deprecated(although it may still work).
 
-I have switched to more theoretical coding for mathematics and will not get round to this package.
+I have switched to other codings and will not get round to this package.
 
 If you wish to be the maintainer of the package, or intend to branch your distribution of it please contact me for more background info about this project.
 
