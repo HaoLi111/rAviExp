@@ -1,5 +1,10 @@
 # rAviExp
 
+## WebUI
+
+https://haoli111.shinyapps.io/WebrAviExp_LCV/
+https://haoli111.shinyapps.io/WebrAviExpConvConcept/
+https://haoli111.shinyapps.io/WebrAviExp_Angle_of_Attack_standalone/
 ## Warning - NOT MAINTAINED
 
 This package was first developed as my high school science fair project and mathematical models are from various sources and some are not well-documented in the help files. There is no guarantee of correctness for some of the undocumented algorithms. No real model has been tested with this packages. All demos are conceptual.
