@@ -1,4 +1,4 @@
 exportPattern("^[[:alpha:]]+")
-S3method(takein, Constraint,create,plot,point)
+S3method(takein, Constraint,create,plot,lines)
 export('%takein%')
 export('%>takein>%')
