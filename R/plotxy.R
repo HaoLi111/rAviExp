@@ -23,6 +23,7 @@ plotxy.wing<-function(wing,add=F,col='black',lty=1){
 pointsxy.wing<-function(wing,col='black',lty=1){
   #if(missing(wing$Dihedral)) wing$Dihedral=0
   if(wing$Type ==1){
+    span<- wing$Span
   }else{
     span<-wing$Span/2
     }
