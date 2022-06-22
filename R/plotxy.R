@@ -26,14 +26,18 @@ pointsxy.wing<-function(wing,col='black',lty=1){
     span<- wing$Span
   }else{
     span<-wing$Span/2
-    }
   x=wing$x;y=wing$y;z=wing$z
   front<-c(x,y,z)
+  #dim(front) = c(1,3)
   rear<-c(x+wing$ChordR,y,z*wing$Dihedral)
+  #dim(rear) = c(1,3)
   frontT<-c(x+span*sind(wing$Sweep),y+span*cosd(wing$Sweep),z+span*cosd(wing$Dihedral))
+  #dim(frontT) = c(1,3)
   rearT<-c(x+span*sind(wing$Sweep)+wing$ChordT,y+span*cosd(wing$Sweep),z+span*cosd(wing$Dihedral))
-  pointCloud<-rbind(front,frontT,rearT,rear)
-  points(pointCloud[,1],pointCloud[,2],xlab='x',ylab='y',type='l',asp=1,col=col,lty=lty)
+  #dim(rearT) = c(1,3)
+  pointCloud<-rbind(as.numeric(front)[1:2],as.numeric(frontT)[1:2],as.numeric(rearT)[1:2],as.numeric(rear)[1:2])
+  plot(pointCloud[,1],pointCloud[,2],xlab='x',ylab='y',type='l',asp=1,col=col,lty=lty)
+  }
 }
 
 plotxy.fuse<-function(fuse,add=F,col='black',lty=1){
