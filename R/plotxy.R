@@ -27,6 +27,7 @@ pointsxy.wing =function (wing, col = "black", lty = 1)
   }
   else {
     span <- wing$Span/2
+    }
     x = wing$x
     y = wing$y
     z = wing$z
@@ -40,7 +41,7 @@ pointsxy.wing =function (wing, col = "black", lty = 1)
                         as.numeric(rearT)[1:2], as.numeric(rear)[1:2])
     points(pointCloud[, 1], pointCloud[, 2], xlab = "x", ylab = "y", 
          type = "l", asp = 1, col = col, lty = lty)
-  }
+  
 }
 
 plotxy.fuse<-function(fuse,add=F,col='black',lty=1){
