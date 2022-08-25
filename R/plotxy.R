@@ -38,7 +38,7 @@ pointsxy.wing =function (wing, col = "black", lty = 1)
                y + span * cosd(wing$Dihedral), z + span * cosd(wing$Dihedral))
     pointCloud <- rbind(as.numeric(front)[1:2], as.numeric(frontT)[1:2], 
                         as.numeric(rearT)[1:2], as.numeric(rear)[1:2])
-    plot(pointCloud[, 1], pointCloud[, 2], xlab = "x", ylab = "y", 
+    points(pointCloud[, 1], pointCloud[, 2], xlab = "x", ylab = "y", 
          type = "l", asp = 1, col = col, lty = lty)
   }
 }
