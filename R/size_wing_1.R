@@ -6,7 +6,7 @@ ChordT=ChordR*TR
 if(Type==0){
   Sweep=atand((ChordR-ChordT)*Xf_C/(b/2))
 }else if(Type==1){
-  Sweep=atand((ChordR=ChordT)*Xf_C/b)
+  Sweep=atand((ChordR-ChordT)*Xf_C/b)
 }
 
 re=list(Span=b,Sweep=Sweep,
