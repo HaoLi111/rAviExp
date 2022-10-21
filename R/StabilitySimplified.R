@@ -19,7 +19,7 @@ SC_simp.conventionalConcept=function(x,Xcg,Xnp = NULL,gamma.include =F,Cl = NA,G
   if (is.null(Xnp)){
     Xnp_OCW_est<-MACM$ChordAvg*(.25+(1+2/Geom_AR(x$WM))/(1+2/Geom_AR(x$WH)))*(1-4/(2+Geom_AR(x$WM))*Vh)+x$WM$x
     #message(paste0('No Xnp Detected, using estimation from OCW Lab8 Notes P4',Xnp_OCW_est))
-    Xnp = Xnp_OCW_est
+    Xnp = Pos$xM# Replace the estimated neutral point by OCW by the aerodynamic focus of the main wing
   }
   SM =(Xcg - Xnp)/ MACM$ChordAvg#;message('OK')#Static Margin
   #Nondimensionization (torque d(T)/d(alpha) / (.5*Cl*rho*v^2) )
@@ -33,7 +33,7 @@ SC_simp.conventionalConcept=function(x,Xcg,Xnp = NULL,gamma.include =F,Cl = NA,G
     Coef = cbind(Coef,VvB)
   }
 
-  Raw = list(Xcg=Xcg,Xnp=Xnp)
+  Raw = list(Xcg=Xcg,Xnp=Xnp,Xnp_2 = Xnp_OCW_est)
   re = list(From =deparse(substitute(x)),Raw = Raw,Pos = Pos,Lever = Lever,Coef=Coef)
   class(re) = 'SCSimpOut'
   re
